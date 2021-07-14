@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnOK = findViewById(R.id.btnOK);
         imgPET = findViewById(R.id.imgPET);
 
-        chkagree.setOnClickListener(new CompoundButton.OnCheckedChangeListener() {
+        chkagree.setOnCheckedChangeListener();new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (chkagree.isChecked() == true) {
@@ -53,18 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-            btnOK.onCheckedChanged(new view.OnClickListener){
+            btnOK.setOnClickListener(new view.OnClickListener){
                 @Override
                         public void onClick(view v){
                             switch (RG1.getCheckedRadioButtonId()){
                                 case R.id.RdDog:
-                                    imgPET.setImageResource(R.drawable.dog);
+                                    imgPET.setImageResource(R.drawable.oreo);
                                     break;
                                 case R.id.RdCat:
-                                    imgPET.setImageResource(R.drawable.cat);
+                                    imgPET.setImageResource(R.drawable.pie);
                                     break;
                                 case R.id.RdRab:
-                                    imgPET.setImageResource(R.drawable.rabbit);
+                                    imgPET.setImageResource(R.drawable.q10);
                                     break;
                                 default:
                                     Toast.makeText(MainActivity.this,"동물먼저 선ㅌ책핫요",Toast.LENGTH_SHORT).show();
